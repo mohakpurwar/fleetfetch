@@ -82,9 +82,9 @@ const selectedIcon = localStorage.getItem("selected-icon");
 
 // We obtain the current theme that the interface has by validating the dark-theme class
 const getCurrentTheme = () =>
-  document.body.classList.contains(darkTheme) ? "dark" : "light";
+  document.body.classList.contains(darkTheme) ? "light" : "dark";
 const getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? "bx-moon" : "bx-sun";
+  themeButton.classList.contains(iconTheme) ? "bx-sun" : "bx-moon";
 
 // We validate if the user previously chose a topic
 if (selectedTheme) {
