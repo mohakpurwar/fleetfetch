@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-  <!--========== NOTE ========== -->
-  
-  <!-- TU 10 BAAP KA BSDK BEHEN KE LAUDA MADARCHOD AGAR WEBSITE COPY PASTE KAR RAHA HAI TOH  -->
-  
+<!--========== NOTE ========== -->
+
+<!-- TU 10 BAAP KA BSDK BEHEN KE LAUDA MADARCHOD AGAR WEBSITE COPY PASTE KAR RAHA HAI TOH  -->
+
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3Z1B3JKLFN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Z1B3JKLFN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-3Z1B3JKLFN');
-</script>
+    gtag('config', 'G-3Z1B3JKLFN');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!--==================== FAVICON ====================-->
@@ -25,9 +25,27 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/rate.css" />
   <link rel="stylesheet" href="assets/css/modal.css" />
+  <style>
+    #player:checked+label+div {
+      display: none;
+    }
+
+    #player+label:after {
+      content: "❚❚";
+    }
+
+    #player:checked+label:after {
+      content: "▶";
+    }
+
+    label {
+      cursor: pointer;
+      color: #3fc060;
+    }
+  </style>
   <!--========== Title ==========-->
   <title>Fleet Fetch</title>
-  
+
 </head>
 
 <body>
@@ -55,51 +73,59 @@
             <a href="#about" class="nav_link">About</a>
           </li>
           <li class="nav_item">
-            <a href="#services" class="nav_link">Services</a>
+            <a href="#services" class="nav_link">Offers</a>
           </li>
           <li class="nav_item">
-            <a href="#foods" class="nav_link">Offers</a>
+            <a href="#foods" class="nav_link">Services</a>
           </li>
+
           <li class="hidden_item">
             <a href="#app" class="nav_link">App</a>
           </li>
           <li class="nav_item">
             <a href="#contact" class="nav_link">Contact</a>
           </li>
-
+          <li class="nav_item">
+            <input type="checkbox" style='display: none' id=player onclick='
+            var a = document.getElementsByTagName("audio")[0];
+            if(a.paused)a.play();else a.pause()'>
+            <label for=player></label>
+          </li>
           <li><i class="bx bx-moon change-theme" id="theme-button"></i></li>
         </ul>
-      </div>
+        <audio src="assets/preloader.mp3" autoplay loop></audio>
 
-      <div class="nav_toggle" id="nav-toggle">
-        <!--When clicked activate the class "opened"
+
+        <div class="nav_toggle" id="nav-toggle">
+          <!--When clicked activate the class "opened"
           to the button tag as well to the 4 SVG lines-->
-        <button class="menu" aria-label="Abrir Menu"
-          onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))">
-          <svg width="40" height="41" viewBox="0 0 100 100">
-            <path class="line line1"
-              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-            <path class="line line2" d="M 20,50 H 80" />
-            <path class="line line3"
-              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-          </svg>
-        </button>
-      </div>
+          <button class="menu" aria-label="Abrir Menu"
+            onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))">
+            <svg width="40" height="41" viewBox="0 0 100 100">
+              <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+          </button>
+        </div>
     </nav>
   </header>
 
   <main class="l-main">
     <!--========== HOME ==========-->
-  <section class="home" id="home">
+    <section class="home" id="home">
       <div class="home_container bd-container bd-grid">
         <div class="home_data">
           <h1 class="home_title">Order anything</h1>
           <h2 class="home_subtitle">On your doorstep! 😍</h2>
-          <a target="_blank" href="https://forms.gle/pocXoyDhv5N7Nz798" class="button">Order Now</a>
+          <a target="_blank" href="https://forms.gle/uAqKYnj8B7ZcRR5H9" class="button">Order Now</a>
         </div>
-        <img src="assets/img/home.png" alt="Prato de comida saudável" class="home_img"/>
+        <img src="assets/img/home.png" alt="Prato de comida saudável" class="home_img" />
       </div>
     </section>
+
 
     <!--========== ABOUT ==========-->
     <section class="about section bd-container" id="about">
@@ -292,7 +318,7 @@
             Photocopy, Practical Files<br> etc...</span>
           <span class="foods_price"></span>
 
-          <a target="_blank" href="https://forms.gle/X6ZgvB2z1Wq45qWg8" class="button foods_button">
+          <a target="_blank" href="https://forms.gle/uAqKYnj8B7ZcRR5H9" class="button foods_button">
             <i class="bx bx-cart"></i>
           </a>
         </div>
@@ -304,7 +330,7 @@
             Prescription<br>(Medical-For Attendence)</span>
           <span class="foods_price"></span>
 
-          <a target="_blank" href="https://forms.gle/v9gQy62UYYT16cg79" class="button foods_button">
+          <a target="_blank" href="https://forms.gle/uAqKYnj8B7ZcRR5H9" class="button foods_button">
             <i class="bx bx-cart"></i>
           </a>
         </div>
@@ -315,7 +341,7 @@
           <span class="foods_detail">1. Personal Portfolio,<br>2. Development Projects,<br>3. DSA Projects,<br>4.
             Certifications,<br>5. Resume</span>
           <span class="foods_price"></span>
-          <a target="_blank" href="https://forms.gle/vGnn4HcK6hTh5i2A6" class="button foods_button">
+          <a target="_blank" href="https://forms.gle/uAqKYnj8B7ZcRR5H9" class="button foods_button">
             <i class="bx bx-cart"></i>
           </a>
         </div>
@@ -408,8 +434,7 @@
       <div class="footer_content" style="z-index: -1;">
         <h3 class="footer_title">Address</h3>
         <ul>
-          <li>SRM IMT,
-          <li>
+          <li>SRM IST Delhi-NCR,</li>
           <li>Modinagar, 201204</li>
           <li>Ghaziabad, India</li>
         </ul>
@@ -419,7 +444,7 @@
         <h3 class="footer_title">Navigation</h3>
         <ul>
           <li><a href="#app" class="footer_link">Download</a></li>
-          <li><a href="https://forms.gle/vGnn4HcK6hTh5i2A6" target="_blank"    class="footer_link">Contact</a></li>
+          <li><a href="https://forms.gle/vGnn4HcK6hTh5i2A6" target="_blank" class="footer_link">Contact</a></li>
           <li><a href="https://maps.app.goo.gl/iymghbk7FME8hR5G8" target="_blank" class="footer_link">Location</a></li>
         </ul>
       </div>
@@ -441,6 +466,12 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/modal.js"></script>
   <script src="assets/js/rate.js"></script>
+  <!-- Removing Right Click -->
+  <script>
+    document.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+    });
+  </script>
 </body>
 
 </html>

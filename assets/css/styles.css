@@ -6,7 +6,7 @@
   --header-height: 4rem;
 
   /*========== Colors ==========*/
-  --first-color: #3fc060;
+  /* --first-color: #3fc060;
   --first-color-alt: #048654;
   --title-color: #232323;
   --logo-dark-color: #162328;
@@ -14,8 +14,16 @@
   --text-color-light: #6c6c6c;
   --body-color: #f2f2f2;
   --container-color: #fdfdfd;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-
+  --shadow-color: rgba(0, 0, 0, 0.1); */
+  --title-color: #fff;
+  --text-color: #e8e8e8;
+  --text-color-light: #838385;
+  --body-color: #111f24;
+  --container-color: #172a31;
+  --logo-dark-color: #f1f3f2;
+  --shadow-color: rgba(214, 214, 214, 0.1);
+  --first-color: #3fc060;
+  --first-color-alt: #048654;
   /*========== Font and Typography ==========*/
   --body-font: "Poppins", sans-serif;
 
@@ -98,13 +106,22 @@ img {
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  --title-color: #fff;
+  /* --title-color: #fff;
   --text-color: #e8e8e8;
   --text-color-light: #838385;
   --body-color: #111f24;
   --container-color: #172a31;
   --logo-dark-color: #f1f3f2;
-  --shadow-color: rgba(214, 214, 214, 0.1);
+  --shadow-color: rgba(214, 214, 214, 0.1); */
+  --first-color: #3fc060;
+  --first-color-alt: #048654;
+  --title-color: #232323;
+  --logo-dark-color: #162328;
+  --text-color: #000;
+  --text-color-light: #6c6c6c;
+  --body-color: #f2f2f2;
+  --container-color: #fdfdfd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 /*========== Button Dark/Light ==========*/
