@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Z1B3JKLFN"></script>
@@ -37,6 +38,20 @@
       cursor: pointer;
       color: #3fc060;
     }
+
+    .text-rainbow-animation {
+      background-image:
+        linear-gradient(to right, red, orange, yellow, green, violet, red);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow-animation 1000s linear infinite;
+    }
+
+    @keyframes rainbow-animation {
+      to {
+        background-position: 4500vh;
+      }
+    }
   </style>
   <!--========== Title ==========-->
   <title>Fleet Fetch</title>
@@ -64,19 +79,21 @@
           <li class="nav_item">
             <a href="#home" class="nav_link">Home</a>
           </li>
+
           <li class="nav_item">
-            <a href="#about" class="nav_link">About</a>
+
+            <a href="#about" class="nav_link text-rainbow-animation">Elixir</a>
           </li>
           <li class="nav_item">
-            <a href="#services" class="nav_link">Offers</a>
+            <a href="#services" class="nav_link">About</a>
           </li>
           <li class="nav_item">
             <a href="#foods" class="nav_link">Services</a>
           </li>
 
-          <li class="hidden_item">
+          <!-- <li class="hidden_item">
             <a href="#app" class="nav_link">App</a>
-          </li>
+          </li> -->
           <li class="nav_item">
             <a href="#contact" class="nav_link">Contact</a>
           </li>
@@ -88,7 +105,7 @@
           </li>
           <li><i class="bx bx-moon change-theme" id="theme-button"></i></li>
         </ul>
-      
+
       </div>
       <audio src="assets/preloader.mp3" autoplay loop></audio>
 
@@ -128,15 +145,15 @@
     <section class="about section bd-container" id="about">
       <div class="about_container bd-grid">
         <div class="about_data">
-          <span class="section-subtitle about_initial">About Us</span>
+          <span class="section-subtitle about_initial">Cafe || The Dhaba || Raat Ki Rasoi</span>
           <h2 class="section-title about_initial">
             Experience the best of your region!
           </h2>
           <p class="about_description">
-            With just a few taps on the screen, and with the Uber quality standard, we connect you with the best meals
-            in your region! 😎
+            With just a few taps on the screen, and with the FleetFetch quality standard, we deliver the best meals
+            to your doorstep! 😎
           </p>
-          <button class="bubbly-button">Did you like it?</button>
+          <a href="rasoi.html" class="bubbly-button">Explore Now</a>
           <!-- <a href="#app" class="button">Gostou? Veja agora!</a> -->
         </div>
 
@@ -283,7 +300,7 @@
             2. 20Rs Delivery Charge<br>
             (For Every Order)<br>
             3. Order Anything<br>
-            4. Delivery Within 2km Of SRM
+            4. Laundry Service Also
           </p>
         </div>
 
@@ -294,7 +311,7 @@
             1. Spiral Binding<br>
             2. Photocopy<br>
             3. Practical Files<br>
-            4. Club Merchandise
+            4. Merchandise
           </p>
         </div>
       </div>
@@ -324,7 +341,7 @@
           <img src="assets/img/med.png" alt="" class="foods_img" />
           <h3 class="foods_name">Medicines</h3>
           <span class="foods_detail">1. Medical Certificate<br>(For Hostel),<br> 2. General Medicines,<br>3. Doctor
-            Prescription<br>(Medical-For Attendence)</span>
+            Prescription/Appointment<br>(Medical-For Attendence)</span>
           <span class="foods_price"></span>
 
           <a target="_blank" href="https://forms.gle/uAqKYnj8B7ZcRR5H9" class="button foods_button">
@@ -335,8 +352,9 @@
         <div class="foods_content">
           <img src="assets/img/project.png" alt="" class="foods_img" />
           <h3 class="foods_name">Projects</h3>
-          <span class="foods_detail">1. Personal Portfolio,<br>2. Development Projects,<br>3. DSA Projects,<br>4.
-            Certifications,<br>5. Resume</span>
+          <span class="foods_detail">1. Personal Portfolio Website,<br>2. Development Projects,<br>3. DSA
+            Projects,<br>4.
+            Udemy Certificates,<br>5. Resume Creation</span>
           <span class="foods_price"></span>
           <a target="_blank" href="https://forms.gle/uAqKYnj8B7ZcRR5H9" class="button foods_button">
             <i class="bx bx-cart"></i>
@@ -468,7 +486,22 @@
     document.addEventListener("contextmenu", (event) => {
       event.preventDefault();
     });
+
+    const audio = document.querySelector("audio");
+
+    // Example: Add custom play/pause buttons
+    const playButton = document.getElementById("play-button");
+    const pauseButton = document.getElementById("pause-button");
+
+    playButton.addEventListener("click", () => {
+      audio.play();
+    });
+
+    pauseButton.addEventListener("click", () => {
+      audio.pause();
+    });
   </script>
+
 </body>
 
 </html>
